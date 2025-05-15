@@ -1,0 +1,17 @@
+# Ignorar arquivos da pasta artigos
+artigos/*
+
+# Ignorar arquivos da pasta resultados
+resultados/*
+
+# Exceto se quiser manter as pastas vazias no repositório, adicione um .gitkeep
+!artigos/.gitkeep
+!resultados/.gitkeep
+
+# Ignorar arquivos temporários do Word/Excel
+*.tmp
+~$*
+
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
