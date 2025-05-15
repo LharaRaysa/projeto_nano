@@ -1,48 +1,51 @@
-# 🧪🔍 Analisador de Artigos Científicos sobre Nanopartículas
+# 🧪🔍 Scientific Article Analyzer on Nanoparticles
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white">
-  <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Licença-Acadêmica-important?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge">
+  <img src="https://img.shields.io/badge/License-Academic-important?style=for-the-badge">
 </p>
 
-> Ferramenta para análise automatizada de artigos científicos em PDF sobre nanotecnologia, com geração de relatórios estruturados
+> Tool for automated analysis of scientific PDFs on nanotechnology, generating structured reports
 
-## 📌 Índice
-- [Funcionalidades](#-funcionalidades)
-- [Tecnologias](#-tecnologias)
-- [Instalação](#-instalação)
-- [Como Usar](#-como-usar)
-- [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Saída Esperada](#-saída-esperada)
-- [Contribuição](#-contribuição)
-- [Licença](#-licença)
+## 📌 Index
 
-## 🚀 Funcionalidades
+* [Features](#-features)
+* [Technologies](#-technologies)
+* [Installation](#-installation)
+* [How to Use](#-how-to-use)
+* [Project Structure](#-project-structure)
+* [Expected Output](#-expected-output)
+* [Contributing](#-contributing)
+* [License](#-license)
 
-### 🔬 Extração de Dados
-| Categoria              | Dados Extraídos                     |
-|------------------------|-------------------------------------|
-| **Nanopartículas**     | Nome, tamanho médio, composição     |
-| **Fabricação**         | Técnicas, condições experimentais   |
-| **Aplicações**         | Setores, eficácia descrita          |
-| **Propriedades**       | Físicas, químicas, biológicas       |
-| **Patentes**           | Números, titulares, países          |
+## 🚀 Features
 
-### 📂 Saídas Geradas
+### 🔬 Data Extraction
+
+| Category          | Extracted Information               |
+| ----------------- | ----------------------------------- |
+| **Nanoparticles** | Name, average size, composition     |
+| **Fabrication**   | Techniques, experimental conditions |
+| **Applications**  | Sectors, reported effectiveness     |
+| **Properties**    | Physical, chemical, biological      |
+| **Patents**       | Numbers, holders, countries         |
+
+### 📂 Generated Outputs
+
 ```diff
-+ 📄 Relatório Word (.docx)
-  - Análise individual por artigo
-  - Tabelas comparativas
-  - Destaques científicos
++ 📄 Word Report (.docx)
+  - Individual analysis per article
+  - Comparative tables
+  - Scientific highlights
 
-+ 📊 Planilha Excel (.xlsx)
-  - Resumo consolidado
-  - Gráficos automáticos (barras, pizza)
-  - Filtros avançados
++ 📊 Excel Spreadsheet (.xlsx)
+  - Consolidated summary
+  - Auto-generated charts (bar, pie)
+  - Advanced filters
 ```
 
-## 💻 Tecnologias
+## 💻 Technologies
 
 ```mermaid
 graph LR
@@ -53,36 +56,42 @@ graph LR
     A --> F[numpy]
 ```
 
-## 📥 Instalação
+## 📥 Installation
 
-1. Clone o repositório:
+1. Clone the repository:
+
 ```bash
-git clone https://github.com/seu-usuario/nano-analyser.git
+git clone https://github.com/your-username/nano-analyser.git
 cd nano-analyser
 ```
 
-2. Crie um ambiente virtual (recomendado):
+2. Create a virtual environment (recommended):
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 .\venv\Scripts\activate   # Windows
 ```
 
-3. Instale as dependências:
+3. Install the dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-## 🛠️ Como Usar
+## 🛠️ How to Use
 
-1. Coloque seus PDFs na pasta `artigos/`
-2. Execute o script principal:
+1. Place your PDFs into the `artigos/` folder
+2. Run the main script:
+
 ```bash
 python main.py
 ```
-3. Acesse os resultados em `resultados/`
 
-Exemplo de código:
+3. Access the results in the `resultados/` folder
+
+Example code:
+
 ```python
 from analisador import NanoAnalisador
 
@@ -91,29 +100,29 @@ dados = analisador.processar_artigos('artigos/')
 analisador.gerar_relatorios(dados)
 ```
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 projeto_nano/
-├── 📜 main.py                     # Ponto de entrada
-├── 📂 analisador/                 # Módulos principais
-│   ├── 📜 __init__.py             # Pacote Python
-│   ├── 📜 leitor_pdf.py           # Extração de texto
-│   ├── 📜 extrator_info.py        # Processamento NLP
-│   ├── 📜 relatorio_word.py       # Geração Word
-│   └── 📜 relatorio_excel.py      # Geração Excel
-├── 📂 artigos/                    # PDFs de entrada
-├── 📂 resultados/                 # Arquivos gerados
-├── 📜 .gitignore                  # Configuração Git
-└── 📜 README.md                   # Documentação
+├── 📜 main.py                     # Entry point
+├── 📂 analisador/                 # Main modules
+│   ├── 📜 __init__.py             # Python package
+│   ├── 📜 leitor_pdf.py           # PDF text extraction
+│   ├── 📜 extrator_info.py        # NLP-based processing
+│   ├── 📜 relatorio_word.py       # Word report generation
+│   └── 📜 relatorio_excel.py      # Excel report generation
+├── 📂 artigos/                    # Input PDFs
+├── 📂 resultados/                 # Generated files
+├── 📜 .gitignore                  # Git configuration
+└── 📜 README.md                   # Documentation
 ```
 
-## 📜 Licença
+## 📜 License
 
-Este projeto está licenciado para fins **acadêmicos**. Consulte o arquivo [LICENSE](LICENSE) para detalhes.
+This project is licensed for **academic purposes only**. See the [LICENSE](LICENSE) file for more details.
 
 ---
 
 <p align="center">
-  Desenvolvido com 💙 & ☕ por <b>Lhara Raysa</b> | Transformando ideias em código
+  Developed with 💙 & ☕ by <b>Lhara Raysa</b> | Turning ideas into code
 </p>
